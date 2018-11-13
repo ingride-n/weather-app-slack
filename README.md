@@ -1,4 +1,4 @@
 # weather-app-slack
 Weather bot on Slack
 
-Delivers afternoon and nighttime forecast for College Park, MD
+Delivers afternoon, nighttime and/or next day forecast for College Park, MD
