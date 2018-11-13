@@ -1,2 +1,4 @@
 # weather-app-slack
-Weather app on Slack
+Weather bot on Slack
+
+Delivers afternoon and nighttime forecast for College Park, MD
