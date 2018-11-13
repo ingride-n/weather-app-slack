@@ -29,7 +29,7 @@ entry1 = forecast_items[1]
 day_cast = str(entry0.find('img').get('title'))
 night_cast = str(entry1.find('img').get('title'))
 
-# Save information as a simple webpage
+# Save forecast as a simple webpage
 
 file = open("CPweather.html","w")
 file.write(str(panel_titles[1]))
