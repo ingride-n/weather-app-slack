@@ -1,2 +1,2 @@
 # weather-app-slack
-WEather app on Slack
+Weather app on Slack
