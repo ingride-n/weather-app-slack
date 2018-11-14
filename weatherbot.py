@@ -21,23 +21,19 @@ print(location)
 # Get forecast information
 
 forecast_items = seven_day.find_all(class_="tombstone-container")
-entry0 = forecast_items[0]
-entry1 = forecast_items[1]
+entries = []
+final_msg = location+'\n'
 
-# Retrieve text descriptions of forecast
+for i in range(4):
+	entries.append(str(forecast_items[i].find('img').get('title')))
+	final_msg = final_msg+entries[i]+'\n'
 
-day_cast = str(entry0.find('img').get('title'))
-night_cast = str(entry1.find('img').get('title'))
-
-# Save forecast as a simple webpage
-
+# Create a simple webpage
 file = open("CPweather.html","w")
 file.write(str(panel_titles[1]))
 file.write(str(entry0))
 file.write(str(entry1))
 file.close()
 
-# Post text descriptions to a Slack channel
-
-weather_msg_CP = {'text' : location+'\n'+day_cast+'\n'+night_cast}
+weather_msg_CP = {'text' : final_msg}
 requests.post(web_hook_url, data=json.dumps(weather_msg_CP))
