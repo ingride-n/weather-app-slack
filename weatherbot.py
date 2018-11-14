@@ -31,8 +31,8 @@ for i in range(4):
 # Create a simple webpage
 file = open("CPweather.html","w")
 file.write(str(panel_titles[1]))
-file.write(str(entry0))
-file.write(str(entry1))
+for i in range(4):
+	file.write(str(entries[i]))
 file.close()
 
 weather_msg_CP = {'text' : final_msg}
