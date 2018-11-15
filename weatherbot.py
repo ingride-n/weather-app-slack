@@ -23,19 +23,21 @@ print(location)
 forecast_items = seven_day.find_all(class_="tombstone-container")
 entries = []
 final_msg = location+'\n'
-
 for i in range(4):
 	entries.append(str(forecast_items[i].find('img').get('title')))
-	final_msg = final_msg+entries[i]+'\n'
+	final_msg += entries[i]+'\n'
 
 # Create a simple webpage
+
 file = open("CPweather.html","w")
 file.write(str(panel_titles[1]))
 for i in range(4):
 	file.write(str(entries[i]))
 file.close()
 
+# Post forecast through a Slack app
+
 weather_msg_CP = {'text' : final_msg}
 requests.post(web_hook_url, data=json.dumps(weather_msg_CP))
 
-#End of program
+
