@@ -15,7 +15,7 @@ Delivers afternoon and/or nextday forecast for College Park, MD from weather.gov
 ## Create Your Own Project
 1. In order to use the webhook, you will need to create a `.env` file in the root of your project directory and add your webhook as an environment variable. Then add the following line without spaces:
 
-`SLACK_WEB_HOOK_URL=[enter-webhook-url]`
+`SLACK_WEB_HOOK_URL=<enter-webhook-url>`
 
 2. Next, create a python script and write the code to get weather data. To use the webhook, type `process.env.SLACK_WEB_HOOK_URL` in place of the webhook url. This will use the environment variable. 
 
